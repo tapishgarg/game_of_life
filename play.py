@@ -106,6 +106,7 @@ def integer_value(value, low, high):
 # Asks for inputs like number of rows, number of columns and number of generations and print grid for every
 # generation
 def start_game():
+    # Clean the console before starting the program
     clear_console()
 
     rows = integer_value("Enter number of rows : ", 5, 100 )
