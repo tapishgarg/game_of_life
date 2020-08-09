@@ -38,13 +38,16 @@ def grid_print(rows, cols, grid, gen):
     output = ""
 
     output = "Generation {0} ('.' = Dead and 'X' = Alive)\n\r".format(gen)
+    alive_count = 0
     for row in range(rows):
         for col in range(cols):
             if grid[row][col] == 0:
                 output = output + '. '
             else :
                 output = output + 'X '
+                alive_count = alive_count + 1
         output = output + "\n\r"
+    print("Alive = {0} and Dead = {1}".format(alive_count, (int(rows)*int(cols))-alive_count))    
     print(output)
 
 
